@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+
+    /* Primary */
+
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    /* neutral 
+    - Very dark blue (main BG): hsl(217, 54%, 11%)
+    - Very dark blue (card BG): hsl(216, 50%, 16%)
+    - Very dark blue (line): hsl(215, 32%, 27%)
+    - White: hsl(0, 0%, 100%)
+    */
+
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line-color: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--main-bg);
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--soft-blue);
+    
+}
+
+h1 {
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--white);
+    padding: 15px 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--card-bg);
+    border-radius: 10px;
+    width: 290px ;
+    
+}
+
+.inner-container{ 
+    margin: 20px;
+}
+
+
+.img-contain{
+    position: relative;
+}
+
+.img-contain img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
+    z-index: -1;
+}
+
+.img-contain div {
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    background: hsl(178, 100%, 50%, 55%);
+    cursor: pointer;
+    opacity:0;
+    z-index: 1000;
+    transition: .3s ease;
+    
+}
+.img-contain div:hover {
+   opacity: 1;
+}
+
+.img-contain div img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+
+}
+
+
+.desc-container h1:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.desc-container p{
+    padding-bottom: 15px;
+}
+
+.min-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+.min-container {
+    border-bottom: 1px solid var(--line-color);
+    
+}
+
+span {
+    font-size: 14.5px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+}
+
+.price span {
+    color: var(--cyan);
+    padding-left: 5px;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+}
+
+.time span {
+    padding-left: 5px;
+    color: var(--soft-blue);
+}
+
+.creator {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.profile-pic{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.profile-pic img {
+    width: 100%;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    
+}
+
+.creator p span{
+    color: var(--white);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.creator p span:hover{
+    color: var(--cyan);
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    margin-bottom: 15px;
+    bottom: 0;
+    left: 0;
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
